@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <!--viewportの設定-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
     <title>ikeyan's ポートフォリオ</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!--GoogleFonts-->
-    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
     <!-- FontAwesome -->
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
     <!--Vue.js読み込み-->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <!--アコーディオンライブラリ読み込み-->
@@ -17,22 +23,30 @@
     <!--ページトップライブラリ読み込み-->
     <script src="https://cdn.jsdelivr.net/gh/inotom/vue-go-top@v1.0.2/dist/vue-go-top.min.js"></script>
     <!--favicon設定-->
-    <link rel="icon" type="image/x-icon" href="images/favicon.gif">
+    <link rel="icon" type="image/x-icon" href="images/favicon.gif" />
     <!--TwitterCard設定-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ikeyansaza">
-    <meta property="og:url" content="https://portfolio-ikeyan.xyz">
-    <meta property="og:title" content="ikeyan's portfolio">
-    <meta property="og:description" content="ポートフォリオサイトです。">
-    <meta property="og:image" content="https://portfolio-ikeyan.xyz/images/twitter.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ikeyansaza" />
+    <meta property="og:url" content="https://portfolio-ikeyan.xyz" />
+    <meta property="og:title" content="ikeyan's portfolio" />
+    <meta property="og:description" content="ポートフォリオサイトです。" />
+    <meta
+      property="og:image"
+      content="https://portfolio-ikeyan.xyz/images/twitter.png"
+    />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135296207-4"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-135296207-4"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'UA-135296207-4');
+      gtag("config", "UA-135296207-4");
     </script>
   </head>
   <body>
@@ -51,15 +65,15 @@
           <table>
             <tr>
               <td style="text-align:right">経歴:</td>
-              <td>　大学卒業後、福岡の物流会社に3年勤務。</td>
+              <td>大学卒業後、福岡の物流会社に約3年勤務。</td>
             </tr>
             <tr>
               <td style="text-align:right">使用言語他:</td>
-              <td>　PHP, Laravel, Vue.js, jQuery, MAMP</td>
+              <td>PHP, Laravel, Vue.js, jQuery, MAMP</td>
             </tr>
             <tr>
               <td style="text-align:right">保有資格:</td>
-              <td>　英検準１級, TOEIC 850点</td>
+              <td>英検準１級, TOEIC 850点</td>
             </tr>
           </table>
         </div>
@@ -71,96 +85,183 @@
           <div class="item modalArea">
             <p>遊漁船HP</p>
             <div class="image-a" @click="showModal = 1">
-              <img src="images/01.png" alt="">
+              <img src="images/01.png" alt="" />
             </div>
           </div>
           <div class="item modalArea">
             <p>釣り人専用SNS</p>
             <div class="image-a" @click="showModal = 2">
-              <img src="images/02.png" alt="">
+              <img src="images/02.png" alt="" />
             </div>
           </div>
           <div class="item modalArea">
             <p>memoサイト</p>
             <div class="image-a" @click="showModal = 3">
-              <img src="images/03.png" alt="" style="border: solid 1px #e4e4e4">
+              <img
+                src="images/03.png"
+                alt=""
+                style="border: solid 1px #e4e4e4"
+              />
             </div>
           </div>
           <div class="item modalArea">
             <p>ポートフォリオサイト</p>
             <div class="image-a" @click="showModal = 4">
-              <img src="images/04.png" alt="" style="border: solid 1px #e4e4e4">
+              <img
+                src="images/04.png"
+                alt=""
+                style="border: solid 1px #e4e4e4"
+              />
             </div>
           </div>
 
           <!--モーダルの中身-->
           <modal v-if="showModal == '1'" @close="showModal = false" :key="1">
-              <div slot="image">
-                <div class="image-a">
-                  <img src="images/01.png" alt="">
-                </div>
-              </div>
-              <div slot="contents">
-                <h2>遊漁船HP</h2>
-                <p>URL: <a href="https://kyusanmaru.com" target="_blank" style="border-bottom:1px solid;">https://kyusanmaru.com</a></p>
-                <p>使用言語: PHP</p>
-                <p>利用ライブラリ: jQuery</p>
-                <p>利用CMS: WordPress</p>
-                <p>公開日: 2019年2月末</p>
-                <p>制作期間: 2週間</p>
-                <p>説明: twitter経由でご依頼いただき遊漁船のHPを制作しました。自作テーマを利用し、jQueryを用いてサイトに動きをつけました。</p>
-              </div>
-          </modal>
-          <modal v-else-if="showModal == '2'" @close="showModal = false" :key="2">
             <div slot="image">
               <div class="image-a">
-                <img src="images/02.png" alt="">
+                <img src="images/01.png" alt="" />
+              </div>
+            </div>
+            <div slot="contents">
+              <h2>遊漁船HP</h2>
+              <p>
+                URL:
+                <a
+                  href="https://kyusanmaru.com"
+                  target="_blank"
+                  style="border-bottom:1px solid;"
+                  >https://kyusanmaru.com</a
+                >
+              </p>
+              <p>使用言語: PHP</p>
+              <p>利用ライブラリ: jQuery</p>
+              <p>利用CMS: WordPress</p>
+              <p>公開日: 2019年2月末</p>
+              <p>制作期間: 2週間</p>
+              <p>
+                説明:
+                twitter経由でご依頼いただき遊漁船のHPを制作しました。自作テーマを利用し、jQueryを用いてサイトに動きをつけました。
+              </p>
+            </div>
+          </modal>
+          <modal
+            v-else-if="showModal == '2'"
+            @close="showModal = false"
+            :key="2"
+          >
+            <div slot="image">
+              <div class="image-a">
+                <img src="images/02.png" alt="" />
               </div>
             </div>
             <div slot="contents">
               <h2>釣り人専用SNS</h2>
-              <p>URL: <a href="https://anglershunt.com" target="_blank" style="border-bottom:1px solid;">https://anglershunt.com</a></p>
-              <p>Github: <a href="https://github.com/ikeyansaza/anglershunt" target="_blank" style="border-bottom:1px solid;">anglershunt</a></p>
+              <p>
+                URL:
+                <a
+                  href="https://anglershunt.com"
+                  target="_blank"
+                  style="border-bottom:1px solid;"
+                  >https://anglershunt.com</a
+                >
+              </p>
+              <p>
+                Github:
+                <a
+                  href="https://github.com/ikeyansaza/anglershunt"
+                  target="_blank"
+                  style="border-bottom:1px solid;"
+                  >anglershunt</a
+                >
+              </p>
               <p>使用言語: PHP</p>
               <p>利用FW: Laravel</p>
               <p>利用ライブラリ: jQuery</p>
               <p>公開日: 2019年5月末</p>
               <p>制作期間: 1ヶ月半</p>
-              <p>説明: 釣り人に特化したSNSをLaravelにて制作しました。
-                基本的な機能はinstagramやtwitterを参考にした上でクエスト機能というオリジナルの機能を付け加えました。</p>
+              <p>
+                説明: 釣り人に特化したSNSをLaravelにて制作しました。
+                基本的な機能はinstagramやtwitterを参考にした上でクエスト機能というオリジナルの機能を付け加えました。
+              </p>
             </div>
           </modal>
-          <modal v-else-if="showModal == '3'" @close="showModal = false" :key="3">
+          <modal
+            v-else-if="showModal == '3'"
+            @close="showModal = false"
+            :key="3"
+          >
             <div slot="image">
               <div class="image-a">
-                <img src="images/03.png" alt="">
+                <img src="images/03.png" alt="" />
               </div>
             </div>
             <div slot="contents">
               <h2>memoサイト</h2>
-              <p>URL: <a href="https://memosite.xyz" target="_blank" style="border-bottom:1px solid;">https://memosite.xyz</a></p>
-              <p>Github: <a href="https://github.com/ikeyansaza/memosite" target="_blank" style="border-bottom:1px solid;">memosite</a></p>
+              <p>
+                URL:
+                <a
+                  href="https://memosite.xyz"
+                  target="_blank"
+                  style="border-bottom:1px solid;"
+                  >https://memosite.xyz</a
+                >
+              </p>
+              <p>
+                Github:
+                <a
+                  href="https://github.com/ikeyansaza/memosite"
+                  target="_blank"
+                  style="border-bottom:1px solid;"
+                  >memosite</a
+                >
+              </p>
               <p>使用言語: PHP</p>
               <p>公開日: 2019年3月末</p>
               <p>制作期間: 1ヶ月</p>
-              <p>説明: フルスクラッチにてログイン機能付きのメモサイトを制作しました。</p>
+              <p>
+                説明:
+                フルスクラッチにてログイン機能付きのメモサイトを制作しました。
+              </p>
             </div>
           </modal>
-          <modal v-else-if="showModal == '4'" @close="showModal = false" :key="4">
+          <modal
+            v-else-if="showModal == '4'"
+            @close="showModal = false"
+            :key="4"
+          >
             <div slot="image">
               <div class="image-a">
-                <img src="images/04.png" alt="">
+                <img src="images/04.png" alt="" />
               </div>
             </div>
             <div slot="contents">
               <h2>ポートフォリオサイト（当サイト）</h2>
-              <p>URL: <a href="https://ikeyanportfolio.xyz" target="_blank" style="border-bottom:1px solid;">https://ikeyanportfolio.xyz</a></p>
-              <p>Github: <a href="https://github.com/ikeyansaza/ikeyan-portfolio" target="_blank" style="border-bottom:1px solid;">ikeyan-portfolio</a></p>
+              <p>
+                URL:
+                <a
+                  href="https://ikeyanportfolio.xyz"
+                  target="_blank"
+                  style="border-bottom:1px solid;"
+                  >https://ikeyanportfolio.xyz</a
+                >
+              </p>
+              <p>
+                Github:
+                <a
+                  href="https://github.com/ikeyansaza/ikeyan-portfolio"
+                  target="_blank"
+                  style="border-bottom:1px solid;"
+                  >ikeyan-portfolio</a
+                >
+              </p>
               <p>使用言語: HTML, CSS</p>
               <p>利用FW: Vue.js</p>
               <p>公開日: 2019年6月末</p>
               <p>制作期間: 2日</p>
-              <p>説明: これまで制作物をまとめた個人サイトを作りました。JavaScriptのFW利用経験がなかったのでVue.jsを使い動きをつけました。</p>
+              <p>
+                説明:
+                これまで制作物をまとめた個人サイトを作りました。JavaScriptのFW利用経験がなかったのでVue.jsを使い動きをつけました。
+              </p>
             </div>
           </modal>
         </div>
@@ -168,38 +269,40 @@
       <!--コンタクトボタンを押したらドロップダウン形式でmailアドレスが表示される仕様にする-->
       <section id="contact" class="background-b">
         <h2>Contact</h2>
-          <p v-on:click="toggle" class="togglebutton"><i class="far fa-envelope"></i></p>
-            <vue-slide-up-down :active="active">
-              <div class="element">
-                <p>何かありましたら下記メールアドレスよりご連絡ください。</p>
-                <p>E-Mail: abetyan31503@gmail.com</p>
-              </div>
-            </vue-slide-up-down>
+        <p v-on:click="toggle" class="togglebutton">
+          <i class="far fa-envelope"></i>
+        </p>
+        <vue-slide-up-down :active="active">
+          <div class="element">
+            <p>何かありましたら下記メールアドレスよりご連絡ください。</p>
+            <p>E-Mail: abetyan31503@gmail.com</p>
+          </div>
+        </vue-slide-up-down>
       </section>
     </div>
 
     <!--モーダルの中身のテンプレート-->
     <script type="text/x-template" id="modal-template">
-        <transition name="modal">
-            <div class="modal-mask">
-                <div class="modal-wrapper" @click.self="$emit('close')">
-                    <div class="modal-container">
-                        <div class="modal-image">
-                            <slot name="image"></slot>
-                        </div>
-                        <div class="modal-contents">
-                            <slot name="contents"></slot>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </transition>
+      <transition name="modal">
+          <div class="modal-mask">
+              <div class="modal-wrapper" @click.self="$emit('close')">
+                  <div class="modal-container">
+                      <div class="modal-image">
+                          <slot name="image"></slot>
+                      </div>
+                      <div class="modal-contents">
+                          <slot name="contents"></slot>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </transition>
     </script>
 
     <!--ページトップボタン（機能）-->
     <div id="app">
       <p v-for="item in List">{{item}}</p>
-      <go-top bg-color=#11cdef :has-outline=false>TOP</go-top>
+      <go-top bg-color="#11cdef" :has-outline="false">TOP</go-top>
     </div>
     <footer class="background-a">
       <p>&copy; 2019 ikeyan's portfolio.com</p>
